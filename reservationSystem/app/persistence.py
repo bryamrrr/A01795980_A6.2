@@ -29,10 +29,16 @@ def load_data(file_path):
     """
     if not os.path.exists(file_path):
         return []
-
-    with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data
+    try:
+        # Check if the file is empty.
+        if os.path.getsize(file_path) == 0:
+            return []
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Error reading {file_path}: {e}")
+        return []
 
 
 def save_data(file_path, data):
@@ -43,6 +49,8 @@ def save_data(file_path, data):
         file_path (str): Path to the JSON file.
         data (list): Data to be saved.
     """
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
+    except IOError as e:
+        print(f"Error writing to {file_path}: {e}")
