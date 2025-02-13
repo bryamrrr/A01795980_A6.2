@@ -1,0 +1,25 @@
+[
+    {
+        "hotel_id": 10,
+        "name": "Lakeside Resort",
+        "location": "Lakeview",
+        "total_rooms": 2,
+        "reserved_rooms": [
+            301
+        ]
+    },
+    {
+        "hotel_id": 10,
+        "name": "Lakeside Resort",
+        "location": "Lakeview",
+        "total_rooms": 2,
+        "reserved_rooms": []
+    },
+    {
+        "hotel_id": 10,
+        "name": "Lakeside Resort",
+        "location": "Lakeview",
+        "total_rooms": 2,
+        "reserved_rooms": []
+    }
+]

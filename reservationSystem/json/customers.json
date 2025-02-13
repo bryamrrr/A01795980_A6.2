@@ -1,0 +1,20 @@
+[
+    {
+        "customer_id": 10,
+        "name": "Dana White",
+        "email": "dana@example.com",
+        "phone": "555-1111"
+    },
+    {
+        "customer_id": 10,
+        "name": "Dana White",
+        "email": "dana@example.com",
+        "phone": "555-1111"
+    },
+    {
+        "customer_id": 10,
+        "name": "Dana White",
+        "email": "dana@example.com",
+        "phone": "555-1111"
+    }
+]
